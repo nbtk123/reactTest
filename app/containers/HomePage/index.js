@@ -17,9 +17,24 @@ export default class HomePage extends React.Component { // eslint-disable-line r
 
   render() {
     return (
-      <h1>
-        <FormattedMessage {...messages.header} />
-      </h1>
+      // <h1>
+      //   <FormattedMessage {...messages.header} />
+      // </h1>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-md-12" style={{background: '#ff0000'}}>
+            TOP MENU COMPONENT
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-11" style={{background: '#00ff00'}}>
+            DRAGON COMPONENT
+          </div>
+          <div className="col-md-1" style={{background: '#0000ff'}}>
+            FRIENDS LIST COMPONENT
+          </div>
+        </div>
+      </div>
     );
   }
 }
