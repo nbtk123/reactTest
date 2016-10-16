@@ -14,27 +14,33 @@ import { FormattedMessage } from 'react-intl';
 import messages from './messages';
 import TopMenu from './top-menu';
 import ContentScreen from './contentscreen';
-import FriendList from './friendlist';
+import FriendList from './friendslist/friendlist';
+import Styles from './index.scss';
 
 export default class HomePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
   render() {
+    console.log(Styles);
     return (
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-xs-12" style={{background: '#ff0000'}}>
-            <TopMenu />
+      <div style={{height: '100%'}}>
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-xs-12" style={{background: '#ff0000'}}>
+              <TopMenu />
+            </div>
           </div>
         </div>
-        <div className="row">
-          <div className="col-xs-11" style={{background: '#00ff00'}}>
-            <ContentScreen />
-          </div>
-          <div className="col-xs-1" style={{background: '#0000ff'}}>
-            <FriendList />
-          </div>
-        </div>
-      </div>
+          <div className={Styles.container}>
+            <div className={Styles.row}>
+              <div className={["col-xs-11", Styles.noFloat].join(' ')} style={{background: '#00ff00'}}>
+                <ContentScreen />
+              </div>
+              <div className={["col-xs-1", Styles.noFloat].join(' ')} style={{background: '#0000ff'}}>
+                <FriendList />
+              </div>
+            </div>
+           </div>
+     </div>
     );
   }
 }

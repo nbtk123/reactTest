@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Styles from './friendlist.scss';
 
 class FriendList extends Component {
     render() {
