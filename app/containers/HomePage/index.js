@@ -12,7 +12,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
-import TopMenu from './topmenu';
+import TopMenu from './top-menu';
 import ContentScreen from './contentscreen';
 import FriendList from './friendlist';
 
@@ -22,15 +22,15 @@ export default class HomePage extends React.Component { // eslint-disable-line r
     return (
       <div className="container-fluid">
         <div className="row">
-          <div className="col-md-12" style={{background: '#ff0000'}}>
+          <div className="col-xs-12" style={{background: '#ff0000'}}>
             <TopMenu />
           </div>
         </div>
         <div className="row">
-          <div className="col-md-11" style={{background: '#00ff00'}}>
+          <div className="col-xs-11" style={{background: '#00ff00'}}>
             <ContentScreen />
           </div>
-          <div className="col-md-1" style={{background: '#0000ff'}}>
+          <div className="col-xs-1" style={{background: '#0000ff'}}>
             <FriendList />
           </div>
         </div>
