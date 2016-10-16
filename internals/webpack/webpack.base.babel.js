@@ -27,7 +27,13 @@ module.exports = (options) => ({
       test: /\.css$/,
       exclude: /node_modules/,
       loader: options.cssLoaders,
-    }, {
+    },
+      // Transform our own .scss filess
+    {
+      test: /\.scss$/,
+      loader: "style!css?modules&importLoaders=2&sourceMap&localIdentName=[local]___[hash:base64:5]!autoprefixer?browsers=last 2 version!sass?outputStyle=expanded&sourceMap"
+    },
+      {
       // Do not transform vendor's CSS with CSS-modules
       // The point is that they remain in global scope.
       // Since we require these CSS files in our JS or CSS files,
