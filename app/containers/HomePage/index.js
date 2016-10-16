@@ -12,26 +12,26 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
+import TopMenu from './topmenu';
+import ContentScreen from './contentscreen';
+import FriendList from './friendlist';
 
 export default class HomePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
   render() {
     return (
-      // <h1>
-      //   <FormattedMessage {...messages.header} />
-      // </h1>
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-12" style={{background: '#ff0000'}}>
-            TOP MENU COMPONENT
+            <TopMenu />
           </div>
         </div>
         <div className="row">
           <div className="col-md-11" style={{background: '#00ff00'}}>
-            DRAGON COMPONENT
+            <ContentScreen />
           </div>
           <div className="col-md-1" style={{background: '#0000ff'}}>
-            FRIENDS LIST COMPONENT
+            <FriendList />
           </div>
         </div>
       </div>
