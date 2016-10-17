@@ -1,0 +1,15 @@
+.roundedCorners {
+    border-radius: 25px;
+    border: '2px solid #73AD21'
+}
+
+.topMenuSearch {
+    background-image: url(http://icons.iconarchive.com/icons/graphicloads/100-flat/256/zoom-search-2-icon.png);
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #fff;
+    padding-right: 52px;
+    padding-left: 8px;
+    height: 48px
+}
