@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 import TopMenuProfile from './top-menu-profile'
+import TopMenuSearch from './top-menu-search'
 
 class TopMenuRight extends Component {
     render() {
         return (
-            <div>
-                <TopMenuProfile />
-            </div>
+            <ul>
+                <li style={{display: 'inline-block'}}><TopMenuProfile /></li>
+                <li style={{display: 'inline-block'}}><TopMenuSearch /></li>
+            </ul>
         );
     }
 }
