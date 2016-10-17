@@ -5,7 +5,7 @@ class TopMenuProfile extends Component {
         return (
             <div>
                 <img src="http://image.xboxlive.com/global/t.434f07d2/tile/0/28002" style={{width: '48px', height: '48px'}} />
-                <ul style={{float: 'right', listStyle: 'none', paddingLeft: '1em'}}>
+                <ul style={{listStyle: 'none', paddingLeft: '1em', float: 'right'}}>
                     <li>Yotam</li>
                     <li>Online</li>
                 </ul>

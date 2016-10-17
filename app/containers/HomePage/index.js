@@ -22,7 +22,7 @@ export default class HomePage extends React.Component { // eslint-disable-line r
     return (
       <div className="container-fluid">
         <div className="row">
-          <div className="col-xs-12" style={{background: '#ff0000'}}>
+          <div className="col-xs-12" style={{background: '#9ACD32'}}>
             <TopMenu />
           </div>
         </div>
