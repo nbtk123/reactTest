@@ -12,8 +12,8 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
-import TopMenu from './top-menu';
-import ContentScreen from './contentscreen';
+import TopMenu from './topmenu/top-menu';
+import ContentScreen from './contentscreen/contentscreen';
 import FriendList from './friendslist/friendlist';
 import Styles from './index.scss';
 
