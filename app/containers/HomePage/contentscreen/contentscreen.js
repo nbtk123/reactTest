@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import AbilitiesComponent from './abilities-component/abilities-component'
-import LevelComponent from './level-component/level-component'
+import AbilitiesComponent from './abilities-component/abilities-component';
+import LevelComponent from './level-component/level-component';
+import ImageTextButton from 'components/image-text-button/image-text-button';
 
 class ContentScreen extends Component {
     render() {
@@ -11,7 +12,10 @@ class ContentScreen extends Component {
                         <AbilitiesComponent />
                     </div>
                     <div style={{display: 'table-cell'}}>
-                        <LevelComponent />
+                        <div style={{marginBottom: '50px'}}><LevelComponent/></div>
+                        <div style={{marginBottom: '20px'}}><ImageTextButton text="5 Crystals" imgsrc="http://downloadicons.net/sites/default/files/purple-crystal-icon-2105.png"/></div>
+                        <div style={{marginBottom: '20px'}}><ImageTextButton text="100 Points" imgsrc="http://www.freeiconspng.com/uploads/coins-icon-finance-29.png"/></div>
+                        <div style={{marginBottom: '20px'}}><ImageTextButton text="Return to my last task"/></div>
                     </div>
                 </div>
                 <div style={{display: 'table-row'}}>
