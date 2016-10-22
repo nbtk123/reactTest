@@ -11,8 +11,9 @@
 }
 
 .container {
-
+  position: absolute;
   height: 100%;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -20,10 +21,10 @@
   font-size: 170px !important;
   position: absolute;
   color: white;
-  top:13%;
+  top: 60px;
   cursor: pointer;
   &.right {
-    right:53px;
+    right:46px;
   }
 }
 
@@ -31,13 +32,13 @@
   font-size: 170px !important;
   position: absolute;
   color: #A8C145;
-  top: 13%;
+  top: 60px;
   &.left{
-    left: 20px;
+    left: 5px;
   }
 
   &.right {
-    right: 58px;
+    right: 51px;
   }
 
 

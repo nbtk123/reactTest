@@ -39,7 +39,7 @@ class LearningCarousel extends Component {
   render() {
 
     return (
-      <div className={`${Styles.container} col-xs-9`}>
+      <div className={`${Styles.container} `}>
         <Icon className={`${Styles.arrowShadow} ${Styles.left}`} name="angle-left" />
         <Icon className={Styles.arrow} name="angle-left" onClick={this.moveLeft.bind(this)}/>
 
