@@ -1,0 +1,47 @@
+/* PROGRESS BAR CONTAINER */
+.whiteContainer {
+    background-color: white;
+
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+
+    padding: 1em 2em 1em 1em;
+    margin-top: 1em;
+}
+/* PROGRESS BAR CONTAINER END */
+
+/* PROGRESS BAR */
+.progressbarOuter {
+    width: 20px;
+    height: 200px;
+    background-color: #ccc;
+    
+    position: relative;
+    
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+}
+
+.progressbarInner, .progressbarInner img {
+    width: 100%;
+    position: absolute;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+}
+
+.progressbarInner {
+    background-color: #C71585;
+    bottom: 0;
+    height: 0%;
+}
+
+.progressbarInner img {
+    top: -55px;
+    width: 50px;
+    height: 64px;
+    left: -15px;
+}
+/* PROGRESS BAR END*/
