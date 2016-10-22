@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import AbilitiesComponent from './abilities-component/abilities-component';
 import LevelComponent from './level-component/level-component';
 import ImageTextButton from 'components/image-text-button/image-text-button';
+import GameProductButton from 'components/game-product-button/game-product-button';
 
 class ContentScreen extends Component {
     render() {
@@ -19,8 +20,10 @@ class ContentScreen extends Component {
                     </div>
                 </div>
                 <div style={{display: 'table-row'}}>
-                    <div style={{display: 'table-cell'}}>
-                        BUY
+                    <div style={{display: 'table-cell', textAlign: 'center'}}>
+                        <div style={{position: 'relative', top: '150px'}}>
+                            <GameProductButton imgsrc="http://downloadicons.net/sites/default/files/roller-brush-icon-61533.png" text="25 pts" enabled="true" />
+                        </div>
                     </div>
                 </div>
             </div>

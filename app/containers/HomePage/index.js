@@ -31,7 +31,7 @@ export default class HomePage extends React.Component { // eslint-disable-line r
         </div>
           <div className={Styles.container}>
             <div className={Styles.row}>
-              <div className={["col-xs-11", Styles.noFloat].join(' ')} style={{background: '#00ff00'}}>
+              <div className={["col-xs-11", Styles.noFloat].join(' ')} style={{background: '#aaeeff'}}>
                 <ContentScreen />
               </div>
               <div className={["col-xs-1", Styles.noFloat].join(' ')} style={{background: '#2D3C56'}}>
