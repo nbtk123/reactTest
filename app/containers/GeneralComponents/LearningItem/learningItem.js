@@ -5,7 +5,7 @@ class LearningItem extends Component {
 
   render() {
     return (
-      <div className={Styles.container}>
+      <div className={Styles.container} style={{transform:  `rotateZ( ${this.props.rotatingAngle * -1}deg`}}>
         <div className={Styles.circleShadow}> </div>
         <div className={Styles.circle}>
           <TopHalfCircle level={this.props.level} learningIconImage={this.props.learningIconImage}/>
@@ -21,11 +21,13 @@ LearningItem.porpTypes = {
   level: React.PropTypes.number.isRequired,
   learningIconImage:  React.PropTypes.string.isRequired,
   metaphorIconImage:  React.PropTypes.string.isRequired,
-  metaphorTitle:  React.PropTypes.string.isRequired
+  metaphorTitle:  React.PropTypes.string.isRequired,
+  rotatingAngle: React.PropTypes.number
 };
 
 LearningItem.defaultProps = {
-  level: 1
+  level: 1,
+  rotatingAngle: 0
 };
 
 

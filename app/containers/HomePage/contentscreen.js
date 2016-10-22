@@ -3,7 +3,7 @@ import LearningCarousle from '../GeneralComponents/LearningCarousel/learningCaro
 class ContentScreen extends Component {
     render() {
         return (
-            <div>
+            <div style={{paddingLeft: '100px', paddingTop:'100px', width: '100%', height: '100%', position: 'absolute'}} className="row">
                 <LearningCarousle />
             </div>
         );
