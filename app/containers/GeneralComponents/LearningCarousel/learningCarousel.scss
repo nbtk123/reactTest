@@ -1,0 +1,49 @@
+.carousel{
+  position: absolute;
+  width: 904px;
+  height: 100%;
+  margin-left: 130px;
+  transition-property: transform;
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+}
+
+.container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.arrow {
+  font-size: 170px !important;
+  position: absolute;
+  color: white;
+  top: 140px;
+  cursor: pointer;
+  &.right {
+    right:46px;
+  }
+}
+
+.arrowShadow {
+  font-size: 170px !important;
+  position: absolute;
+  color: #A8C145;
+  top: 140px;
+  &.left{
+    left: 5px;
+  }
+
+  &.right {
+    right: 51px;
+  }
+
+
+}
+
+.transformAnimation {
+  transition-duration: 0.8s;
+}

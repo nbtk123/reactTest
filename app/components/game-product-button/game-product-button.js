@@ -4,8 +4,9 @@ import styles from './styles.css';
 class GameProductButton extends Component {
 
     render() {
+ 
         return (
-            <div className={styles.containerEnabled}>
+            <div className={["col-xs-1", styles.containerEnabled].join(' ')}>
                 <div className={styles.headerTextContainerEnabled}>
                     {this.props.text}
                 </div>
