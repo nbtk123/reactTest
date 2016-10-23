@@ -26,8 +26,10 @@ class LearningCarousel extends Component {
   }
 
   getElementRotatingAngle(elementNumber) {
-    const currentPosition = (elementNumber * this.state.initalPanelRotationAngle + this.state.currentPanelRotationAngle) % (this.state.initalPanelRotationAngle * this.props.learningSubjects.length);
-    const numberOfRounds = Math.trunc((elementNumber * this.state.initalPanelRotationAngle + this.state.currentPanelRotationAngle) / (this.state.initalPanelRotationAngle * this.props.learningSubjects.length));
+    let currentPosition = (elementNumber * this.state.initalPanelRotationAngle + this.state.currentPanelRotationAngle) % (this.state.initalPanelRotationAngle * this.props.learningSubjects.length);
+    currentPosition = currentPosition > 0 ? (this.state.initalPanelRotationAngle * this.props.learningSubjects.length) + currentPosition : currentPosition;
+    const numberOfRounds = Math.floor((elementNumber * this.state.initalPanelRotationAngle + this.state.currentPanelRotationAngle) / (this.state.initalPanelRotationAngle * this.props.learningSubjects.length));
+
     return currentPosition + numberOfRounds * -360;
   }
   getStyle(elementNumber) {
