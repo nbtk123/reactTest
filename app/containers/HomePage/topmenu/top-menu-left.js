@@ -10,7 +10,7 @@ function Subitems(props) {
             <div className="dropdown-menu">
                 {
                     menuItem.subitems.map(function(subitem) {
-                        return (<a href="#" key={subitem}>{subitem}</a>);
+                        return (<div><a href="#" key={subitem}>{subitem}</a></div>);
                     })
                 }
             </div>
@@ -23,7 +23,7 @@ function Separator(props) {
 
     if(isShown) {
         return (
-            <div style={{width: '1px', height: '40px', background: '#617009', display: 'inline-block', position: 'absolute'}}></div>
+            <div style={{width: '1px', height: '2vw', background: '#617009', display: 'inline-block', position: 'absolute', top: '0.1vw'}}></div>
         );
     } else {
         return null;

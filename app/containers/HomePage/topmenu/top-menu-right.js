@@ -6,7 +6,7 @@ import TopMenuFriends from './top-menu-friends'
 class TopMenuRight extends Component {
     render() {
         return (
-            <ul>
+            <ul style={{fontSize: '1vw'}}>
                 <li style={{display: 'inline-block'}}><TopMenuProfile /></li>
                 <li style={{display: 'inline-block'}}><TopMenuFriends /></li>
                 <li style={{display: 'inline-block'}}><TopMenuSearch /></li>
