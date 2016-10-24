@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Styles from './LearningCarousel.scss'
+import Styles from './learningCarousel.scss'
 import LearningItem from './../LearningItem/learningItem'
 import {Icon} from 'react-fa';
 const fireIcon = require('./../../../images/fire.svg');
@@ -42,8 +42,10 @@ class LearningCarousel extends Component {
 
     return (
       <div className={`${Styles.container} `}>
-        <Icon className={`${Styles.arrowShadow} ${Styles.left}`} name="angle-left" />
-        <Icon className={Styles.arrow} name="angle-left" onClick={this.moveLeft.bind(this)}/>
+        <div>
+          <Icon className={`${Styles.arrowShadow} ${Styles.left}`} name="angle-left" />
+          <Icon className={Styles.arrow} name="angle-left" onClick={this.moveLeft.bind(this)}/>
+        </div>
 
         <div className={Styles.carousel}>
             {this.props.learningSubjects.map((learningSubject, index) =>
@@ -52,8 +54,10 @@ class LearningCarousel extends Component {
               </div>)}
         </div>
 
-        <Icon className={`${Styles.arrowShadow} ${Styles.right}`} name="angle-right" />
-        <Icon className={`${Styles.arrow} ${Styles.right}`} name="angle-right" onClick={this.moveRight.bind(this)}/>
+        <div style={{position: 'relative', left: '100px'}}>
+          <Icon className={`${Styles.arrowShadow} ${Styles.right}`} name="angle-right" />
+          <Icon className={`${Styles.arrow} ${Styles.right}`} name="angle-right" onClick={this.moveRight.bind(this)}/>
+        </div>
      
       </div>
     );

@@ -1,0 +1,32 @@
+/* CONTAINER STYLES */
+.containerEnabled, .containerDisabled {
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    position: relative;
+}
+
+.containerEnabled {
+    background-color: green;
+}
+
+.containerDisabled {
+    background-color: #ccc;
+}
+/* CONTAINER STYLES END */
+
+.headerTextContainerEnabled {
+    background-color: green;
+}
+
+.imgContainerEnabled {
+    background-color: lightgreen;
+    -moz-border-radius: 0px 0px 10px 10px;
+    -webkit-border-radius: 0px 0px 10px 10px;
+    border-radius: 0px 0px 10px 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
