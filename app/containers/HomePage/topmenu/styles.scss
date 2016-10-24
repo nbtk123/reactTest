@@ -13,3 +13,13 @@
     padding-left: 8px;
     height: 48px
 }
+
+.topLeftMenuItem {
+    color: white;
+    font-size: 20px;
+}
+
+.topLeftMenuItemBig {
+    @extend .topLeftMenuItem;
+    font-size: 40px;
+}

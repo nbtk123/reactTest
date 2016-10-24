@@ -24,7 +24,7 @@ export default class HomePage extends React.Component { // eslint-disable-line r
       <div style={{height: '100%'}}>
         <div className="container-fluid">
           <div className="row">
-            <div className="col-xs-12" style={{background: '#9ACD32'}}>
+            <div className="col-xs-12" style={{background: '#A9C147', zIndex: '1'}}>
               <TopMenu />
             </div>
           </div>
