@@ -10,7 +10,7 @@ class ContentScreen extends Component {
         return (
           <div className="container-fluid">
             <div className="row" style={{marginTop: '100px'}}>
-                <div className="col-xs-9"  style={{height: '30.438vw'}}>
+                <div className="col-xs-9"  style={{height: '30.438vw', overflow:'hidden'}}>
                     <LearningCarousle />
                 </div>
                 <div className="col-xs-2 col-xs-offset-1">
