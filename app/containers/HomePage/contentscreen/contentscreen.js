@@ -1,17 +1,17 @@
 import React, {Component} from 'react';
-import AbilitiesComponent from './abilities-component/abilities-component';
 import LevelComponent from './level-component/level-component';
 import ImageTextButton from 'components/image-text-button/image-text-button';
 import LearningCarousle from './../../GeneralComponents/LearningCarousel/learningCarousel';
 import GameProductList from './../game-product-list/game-product-list';
+import dragonImg from './dragon.png'
 
 class ContentScreen extends Component {
     render() {
         return (
           <div className="container-fluid">
-            <div className="row" style={{marginTop: '100px'}}>
+            <div className="row" style={{marginTop: '100px', marginBottom: '2%'}}>
                 <div className="col-xs-9"  style={{height: '30.438vw'}}>
-                    <LearningCarousle />
+                    <LearningCarousle centeredImage={dragonImg}/>
                 </div>
                 <div className="col-xs-2 col-xs-offset-1">
                     <div style={{marginBottom: '50px'}}><LevelComponent/></div>
