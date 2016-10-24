@@ -7,8 +7,8 @@ class TopMenuRight extends Component {
     render() {
         return (
             <ul style={{fontSize: '1vw'}}>
-                <li style={{display: 'inline-block'}}><TopMenuProfile /></li>
-                <li style={{display: 'inline-block'}}><TopMenuFriends /></li>
+                <li style={{display: 'inline-block', color: 'white'}}><TopMenuProfile /></li>
+                <li style={{display: 'inline-block', color: 'white'}}><TopMenuFriends /></li>
                 <li style={{display: 'inline-block'}}><TopMenuSearch /></li>
             </ul>
         );

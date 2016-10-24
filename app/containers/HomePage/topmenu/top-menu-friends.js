@@ -5,7 +5,7 @@ class TopMenuFriends extends Component {
         return (
             <div>
                 <img src="http://downloadicons.net/sites/default/files/msn-messenger-icon-48097.png" style={{width: '3vw', height: '3vw'}}/>
-                <div style={{position: 'relative', display: 'inline-block', top:'1vw'}}>13</div>
+                13
             </div>
         );
     }
