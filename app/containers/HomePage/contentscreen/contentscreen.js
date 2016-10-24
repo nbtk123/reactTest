@@ -8,8 +8,9 @@ import GameProductList from './../game-product-list/game-product-list';
 class ContentScreen extends Component {
     render() {
         return (
-            <div style={{paddingLeft: '100px', width: '100%', position: 'relative', top: '100px'}}  className="row">
-                <div className="col-xs-9"  style={{height: '450px', paddingTop:'100px', position: 'relative'}}>
+          <div className="container-fluid">
+            <div className="row" style={{marginTop: '100px'}}>
+                <div className="col-xs-9"  style={{height: '30.438vw'}}>
                     <LearningCarousle />
                 </div>
                 <div className="col-xs-2 col-xs-offset-1">
@@ -18,10 +19,13 @@ class ContentScreen extends Component {
                     <div style={{marginBottom: '20px'}}><ImageTextButton text="100 Points" imgsrc="http://www.freeiconspng.com/uploads/coins-icon-finance-29.png"/></div>
                     <div style={{marginBottom: '20px'}}><ImageTextButton text="Return to my last task"/></div>
                 </div>
-                <div className="col-xs-4" style={{position: 'relative', top: '150px', margin: '0 auto', float: 'none'}}>
-                    <GameProductList />
-                </div>
             </div>
+            <div className="row">
+              <div  className="col-xs-5 col-xs-offset-2">
+                <GameProductList />
+              </div>
+            </div>
+          </div>
         );
     }
 }

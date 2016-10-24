@@ -12,23 +12,23 @@ class LearningCarousel extends Component {
     this.state = {
       panelSize: 300,
       numberOfPanels: props.learningSubjects.length,
-      initalPanelRotationAngle: -45,
-      currentPanelRotationAngle: 0
+      rotationStep: -60,
+      carouselCurrentRotationAngle: 0
     }
   }
 
   moveLeft() {
-    this.setState({currentPanelRotationAngle: this.state.currentPanelRotationAngle - this.state.initalPanelRotationAngle})
+    this.setState({carouselCurrentRotationAngle: this.state.carouselCurrentRotationAngle - this.state.rotationStep})
   }
 
   moveRight() {
-    this.setState({currentPanelRotationAngle: this.state.currentPanelRotationAngle + this.state.initalPanelRotationAngle})
+    this.setState({carouselCurrentRotationAngle: this.state.carouselCurrentRotationAngle + this.state.rotationStep})
   }
 
   getElementRotatingAngle(elementNumber) {
-    let currentPosition = (elementNumber * this.state.initalPanelRotationAngle + this.state.currentPanelRotationAngle) % (this.state.initalPanelRotationAngle * this.props.learningSubjects.length);
-    currentPosition = currentPosition > 0 ? (this.state.initalPanelRotationAngle * this.props.learningSubjects.length) + currentPosition : currentPosition;
-    const numberOfRounds = Math.floor((elementNumber * this.state.initalPanelRotationAngle + this.state.currentPanelRotationAngle) / (this.state.initalPanelRotationAngle * this.props.learningSubjects.length));
+    let currentPosition = (elementNumber * this.state.rotationStep + this.state.carouselCurrentRotationAngle) % (this.state.rotationStep * this.props.learningSubjects.length);
+    currentPosition = currentPosition > 0 ? (this.state.rotationStep * this.props.learningSubjects.length) + currentPosition : currentPosition;
+    const numberOfRounds = Math.floor((elementNumber * this.state.rotationStep + this.state.carouselCurrentRotationAngle) / (this.state.rotationStep * this.props.learningSubjects.length));
 
     return currentPosition + numberOfRounds * -360;
   }
@@ -42,10 +42,10 @@ class LearningCarousel extends Component {
 
     return (
       <div className={`${Styles.container} `}>
-        <div>
+
           <Icon className={`${Styles.arrowShadow} ${Styles.left}`} name="angle-left" />
           <Icon className={Styles.arrow} name="angle-left" onClick={this.moveLeft.bind(this)}/>
-        </div>
+
 
         <div className={Styles.carousel}>
             {this.props.learningSubjects.map((learningSubject, index) =>
@@ -54,10 +54,10 @@ class LearningCarousel extends Component {
               </div>)}
         </div>
 
-        <div style={{position: 'relative', left: '100px'}}>
+
           <Icon className={`${Styles.arrowShadow} ${Styles.right}`} name="angle-right" />
           <Icon className={`${Styles.arrow} ${Styles.right}`} name="angle-right" onClick={this.moveRight.bind(this)}/>
-        </div>
+
      
       </div>
     );

@@ -1,8 +1,9 @@
 .carousel{
   position: absolute;
-  width: 904px;
+  width: 74.76759189%;
   height: 100%;
-  margin-left: 130px;
+  margin-left: 10.751%;
+  margin-right: 10.751%;
   transition-property: transform;
   -webkit-transition-duration: 0.8s;
   -moz-transition-duration: 0.8s;
@@ -12,38 +13,42 @@
 
 .container {
   position: absolute;
-  height: 100%;
+  height: 77.5862069%;
   width: 100%;
-  overflow: hidden;
+  min-width: 700px;
+  //overflow: hidden;
 }
 
 .arrow {
-  font-size: 170px !important;
+  font-size: 10vw !important;
   position: absolute;
   color: white;
-  top: 140px;
+  top: 20.1111%;
   cursor: pointer;
   &.right {
-    right:46px;
+    right: 3.80454%;
   }
 }
 
 .arrowShadow {
-  font-size: 170px !important;
+  font-size: 10vw !important;
   position: absolute;
   color: #A8C145;
-  top: 140px;
+  top: 20.1111%;
   &.left{
     left: 5px;
   }
 
   &.right {
-    right: 51px;
+    right: 4.218%;
   }
 
 
 }
 
 .transformAnimation {
+  position: absolute;
+  width: 100%;
+  height: 66.6666%;
   transition-duration: 0.8s;
 }
