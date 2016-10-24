@@ -1,0 +1,23 @@
+.container {
+  position: relative;
+  text-align: center;
+  width: 3vw;
+  color: white;
+  font-size: 0.8vw;
+  font-weight: 600;
+  background: #384357;
+  box-shadow: 0 5px 0 #1A2A3F;
+  border-radius: 7px;
+  height: 3.7vw;
+
+  .icon {
+    font-size: 0.8vw !important;
+    font-weight: 600;
+    position: absolute;
+    color: white;
+
+    top: 64.1111%;
+    left: 41%;
+  }
+
+}

@@ -1,27 +1,31 @@
 import React, {Component, PropTypes} from 'react';
-import styles from './styles.css';
-
+import styles from './styles.scss';
 class GameProductButton extends Component {
 
     render() {
- 
+      let enabled = this.props.btnEnabled;
+      let boxClass = enabled ? styles.enabled : styles.disabled;
         return (
-            <div className={["col-xs-1", styles.containerEnabled].join(' ')}>
-                <div className={styles.headerTextContainerEnabled}>
-                    {this.props.text}
+          <li className={styles.container}>
+            <div className={[styles.boxContainer, boxClass].join(' ')}>
+                <div className={styles.header}>
+                  {this.props.price} pts
                 </div>
-                <div className={styles.imgContainerEnabled}>
-                    <img src={this.props.imgsrc} style={{width: '48px', height: '48px'}} />
-                </div>
+                <img src={this.props.imgsrc} style={{width: '2vw', height: '2vw', margin:'5% 0'}} />
             </div>
+            <div className={styles.productDescription}>{this.props.productName} </div>
+            <div className={styles.gameTitle}>{this.props.gameName} </div>
+          </li>
         );
     }
 }
 
 GameProductButton.propTypes = {
-    text: React.PropTypes.string,
-    imgsrc: React.PropTypes.string,
-    enabled: React.PropTypes.boolean
+  btnEnabled: React.PropTypes.bool,
+  price: React.PropTypes.number,
+  imgsrc: React.PropTypes.string,
+  gameName: React.PropTypes.string,
+  productName: React.PropTypes.string
 };
 
 export default GameProductButton;

@@ -1,0 +1,53 @@
+/* CONTAINER STYLES */
+.container {
+  margin-right: 1%;
+  text-align: center;
+  width: 4vw;
+  .gameTitle {
+    color: #DB5B95;
+
+    font-size: 0.8vw;
+    font-weight: 600;
+  }
+
+  .productDescription {
+    color: #435262;
+    font-size: 0.8vw;
+    font-weight: 600;
+
+  }
+
+  .boxContainer {
+    margin-bottom: 5%;
+    height: 3.7vw;
+    &.enabled {
+      box-shadow: 0 5px 0 #708017;
+      color: #A9C246;
+      background: #A9C246;
+      .header {
+        background: #708018;
+      }
+    }
+    &.disabled {
+      color: #ACACAC;
+      background: #ACACAC;
+      .header {
+        background: #6F6F6F;
+      }
+    }
+
+    border-radius: 7px;
+
+
+
+    .header {
+      border-radius: 7px 7px 0 0;
+      font-size: 0.8vw;
+      font-weight: 800;
+    }
+
+
+  }
+}
+
+

@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import AbilitiesComponent from './abilities-component/abilities-component';
 import LevelComponent from './level-component/level-component';
 import ImageTextButton from 'components/image-text-button/image-text-button';
 import LearningCarousle from './../../GeneralComponents/LearningCarousel/learningCarousel';
@@ -9,7 +8,7 @@ class ContentScreen extends Component {
     render() {
         return (
           <div className="container-fluid">
-            <div className="row" style={{marginTop: '100px'}}>
+            <div className="row" style={{marginTop: '100px', marginBottom: '2%'}}>
                 <div className="col-xs-9"  style={{height: '30.438vw', overflow:'hidden'}}>
                     <LearningCarousle />
                 </div>
