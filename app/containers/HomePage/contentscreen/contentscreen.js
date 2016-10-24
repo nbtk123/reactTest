@@ -21,7 +21,7 @@ class ContentScreen extends Component {
                 </div>
             </div>
             <div className="row">
-              <div  className="col-xs-5 col-xs-offset-2">
+              <div className="col-xs-5 col-xs-offset-2">
                 <GameProductList />
               </div>
             </div>

@@ -3,13 +3,15 @@ import React, {Component} from 'react';
 class TopMenuProfile extends Component {
     render() {
         return (
-            <div>
-                <img src="http://image.xboxlive.com/global/t.434f07d2/tile/0/28002" style={{width: '48px', height: '48px'}} />
-                <ul style={{listStyle: 'none', paddingLeft: '1em', float: 'right'}}>
-                    <li>Yotam</li>
-                    <li>Online</li>
-                </ul>
-            </div>
+            <ul>
+                <li style={{display: 'inline', verticalAlign: 'middle'}}><img src="http://image.xboxlive.com/global/t.434f07d2/tile/0/28002" style={{width: '3vw', height: '3vw'}} /></li>
+                <li style={{display: 'inline-block', verticalAlign: 'middle'}}>
+                    <ul style={{listStyle: 'none', paddingLeft: '1em'}}>
+                        <li>Yotam</li>
+                        <li>Online</li>
+                    </ul>
+                </li>
+            </ul>
         );
     }
 }

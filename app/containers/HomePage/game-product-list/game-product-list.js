@@ -11,8 +11,8 @@ class GameProductList extends Component {
             {imgsrc: rockedIcon, price: 25, btnEnabled: false, gameName: "Minecraft", productName: "New Island", id:1},
             {imgsrc: rockedIcon, price: 25, btnEnabled: true, gameName: "Minecraft", productName: "New Island", id:2},
             {imgsrc: rockedIcon, price: 25, btnEnabled: false, gameName: "Minecraft", productName: "New Island", id:3},
-          {imgsrc: rockedIcon, price: 25, btnEnabled: true, gameName: "Minecraft", productName: "New Island", id:4},
-          {imgsrc: rockedIcon, price: 25, btnEnabled: true, gameName: "Minecraft", productName: "New Island", id:5}
+            {imgsrc: rockedIcon, price: 25, btnEnabled: true, gameName: "Minecraft", productName: "New Island", id:4},
+            {imgsrc: rockedIcon, price: 25, btnEnabled: true, gameName: "Minecraft", productName: "New Island", id:5},
         ];
 
         return (

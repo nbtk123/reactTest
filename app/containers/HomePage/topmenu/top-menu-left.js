@@ -7,13 +7,13 @@ function Subitems(props) {
         return null;
     } else {
         return (
-            <ul className="dropdown-menu">
+            <div className="dropdown-menu">
                 {
                     menuItem.subitems.map(function(subitem) {
-                        return (<li key={subitem}><a href="#">{subitem}</a></li>);
+                        return (<a href="#" key={subitem}>{subitem}</a>);
                     })
                 }
-            </ul>
+            </div>
         )
     }
 }
@@ -23,7 +23,7 @@ function Separator(props) {
 
     if(isShown) {
         return (
-            <div style={{float: 'left', width: '1px', height: '40px', background: '#617009'}}></div>
+            <div style={{width: '1px', height: '40px', background: '#617009', display: 'inline-block', position: 'absolute'}}></div>
         );
     } else {
         return null;
@@ -34,14 +34,14 @@ function MenuItem(props) {
     const i = props.i;
     const menuItem = props.menuItems[i];
 
-    //const isSeparatorShown = props.menuItems.length-1 != i;
+    const isSeparatorShown = props.menuItems.length-1 != i;
 
     return (
-        <div className="dropdown" key={menuItem.title} style={{float: 'left', marginTop: '15px'}}>
+        <li className="dropdown" key={menuItem.title} style={{verticalAlign: 'middle', display: 'inline-block', position: 'relative'}}>
             <a className={["btn dropdown-toggle", styles.topLeftMenuItem].join(' ')} data-toggle="dropdown">{menuItem.title}</a>
             <Subitems menuItem={menuItem}/>
-            <Separator isShown={true} />
-        </div>
+            <Separator isShown={isSeparatorShown} />
+        </li>
     )
 }
 
@@ -58,10 +58,11 @@ class TopMenuLeft extends Component {
     render() { 
 
         return (
-            <div>
-                <div className="dropdown" key='SP' style={{float: 'left'}}>
-                    <a className={["btn dropdown-toggle", styles.topLeftMenuItemBig].join(' ')} data-toggle="dropdown">SP</a>
-                </div>
+            <ul style={{paddingLeft: '0'}}>
+                <li style={{verticalAlign: 'middle', display: 'inline-block', position: 'relative'}}>
+                    <a className={["btn dropdown-toggle", styles.topLeftMenuItemBig].join(' ')} data-toggle="dropdown" key="SP">SP</a>
+                    <div style={{display: 'inline-block', position: 'absolute', top: '0.7vw'}}><Separator isShown={true} /></div>
+                </li>
                 {this.menuItems.map(
                     function(menuItem, i, menuItems) {
                         return (
@@ -69,7 +70,7 @@ class TopMenuLeft extends Component {
                         )
                     }
                 )}
-            </div>
+            </ul>
         );
     }
 }

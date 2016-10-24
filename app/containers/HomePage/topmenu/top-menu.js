@@ -5,14 +5,14 @@ import TopMenuRight from './top-menu-right'
 class TopMenu extends Component {
     render() {
         return (
-            <div>
-                <div style={{float: 'left'}}>
+            <ul style={{paddingLeft: '0'}}>
+                <li style={{display: 'inline-block'}}>
                     <TopMenuLeft />
-                </div>
-                <div style={{float: 'right'}}>
+                </li>
+                <li style={{display: 'inline-block', float: 'right', position: 'relative', top:'0.45vw'}}>
                     <TopMenuRight />
-                </div>
-            </div>
+                </li>
+            </ul>
         );
     }
 }
