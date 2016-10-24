@@ -13,22 +13,22 @@ class LearningCarousel extends Component {
       panelSize: 300,
       numberOfPanels: props.learningSubjects.length,
       rotationStep: -60,
-      carouselCurrentRotationAngle: 0
+      currentPanelRotationAngle: 0
     }
   }
 
   moveLeft() {
-    this.setState({carouselCurrentRotationAngle: this.state.carouselCurrentRotationAngle - this.state.rotationStep})
+    this.setState({currentPanelRotationAngle: this.state.currentPanelRotationAngle - this.state.rotationStep})
   }
 
   moveRight() {
-    this.setState({carouselCurrentRotationAngle: this.state.carouselCurrentRotationAngle + this.state.rotationStep})
+    this.setState({currentPanelRotationAngle: this.state.currentPanelRotationAngle + this.state.rotationStep})
   }
 
   getElementRotatingAngle(elementNumber) {
-    let currentPosition = (elementNumber * this.state.rotationStep + this.state.carouselCurrentRotationAngle) % (this.state.rotationStep * this.props.learningSubjects.length);
+    let currentPosition = (elementNumber * this.state.rotationStep + this.state.currentPanelRotationAngle) % (this.state.rotationStep * this.props.learningSubjects.length);
     currentPosition = currentPosition > 0 ? (this.state.rotationStep * this.props.learningSubjects.length) + currentPosition : currentPosition;
-    const numberOfRounds = Math.floor((elementNumber * this.state.rotationStep + this.state.carouselCurrentRotationAngle) / (this.state.rotationStep * this.props.learningSubjects.length));
+    const numberOfRounds = Math.floor((elementNumber * this.state.rotationStep + this.state.currentPanelRotationAngle) / (this.state.rotationStep * this.props.learningSubjects.length));
 
     return currentPosition + numberOfRounds * -360;
   }
@@ -48,6 +48,7 @@ class LearningCarousel extends Component {
 
 
         <div className={Styles.carousel}>
+          <img src={this.props.centeredImage} className={Styles.dragonImage}></img>
             {this.props.learningSubjects.map((learningSubject, index) =>
               <div className={Styles.transformAnimation} key={learningSubject.metaphorTitle} style={this.getStyle(index)}>
                 <LearningItem  {...learningSubject} rotatingAngle={this.getElementRotatingAngle(index)} />
