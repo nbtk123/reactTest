@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import styles from './styles.scss';
+import Separator from './separator';
 
 function Subitems(props) {
     const menuItem = props.menuItem;
@@ -18,17 +19,17 @@ function Subitems(props) {
     }
 }
 
-function Separator(props) {
-    const isShown = props.isShown;
+// function Separator(props) {
+//     const isShown = props.isShown;
 
-    if(isShown) {
-        return (
-            <div style={{width: '1px', height: '2vw', background: '#617009', display: 'inline-block', position: 'absolute', top: '0.1vw'}}></div>
-        );
-    } else {
-        return null;
-    }
-}
+//     if(isShown) {
+//         return (
+//             <div style={{width: '1px', height: '2.5vw', background: '#617009', display: 'inline-block', position: 'absolute'}}></div>
+//         );
+//     } else {
+//         return null;
+//     }
+// }
 
 function MenuItem(props) {
     const i = props.i;

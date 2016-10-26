@@ -23,3 +23,24 @@
     @extend .topLeftMenuItem;
     font-size: 2vw;
 }
+
+.profileImage {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 0.4vw;
+    width: 3vw;
+    height: 3vw;
+}
+
+.statusCircle {
+	border-radius: 50%;
+	width: 0.7vw;
+	height: 0.7vw;
+    display: inline-block;
+    margin-right: 0.25vw;
+}
+
+.statusOnlineCircle {
+    @extend .statusCircle;
+    background-color: #80AB3F;
+}

@@ -9,7 +9,7 @@ class TopMenu extends Component {
                 <li style={{display: 'inline-block'}}>
                     <TopMenuLeft />
                 </li>
-                <li style={{display: 'inline-block', float: 'right', position: 'relative', top:'0.45vw'}}>
+                <li style={{display: 'inline-block', float: 'right', position: 'relative', top:'0.45em'}}>
                     <TopMenuRight />
                 </li>
             </ul>
