@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import LevelComponent from './level-component/level-component';
 import ImageTextButton from 'components/image-text-button/image-text-button';
-import LearningCarousle from './../../GeneralComponents/LearningCarousel/learningCarousel';
+import LearningCarousle from '../../../components/LearningCarousel/learningCarousel';
 import GameProductList from './../game-product-list/game-product-list';
 import dragonImg from './dragon.png'
 
