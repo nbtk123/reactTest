@@ -15,31 +15,42 @@ import messages from './messages';
 import TopMenu from './topmenu/top-menu';
 import ContentScreen from './contentscreen/contentscreen';
 import FriendList from './friendslist/friendlist';
+import LoginScreen from './../LoginScreen/loginscreen';
 import Styles from './index.scss';
 
 export default class HomePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
   render() {
-    return (
-      <div style={{height: '100%'}}>
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-xs-12" style={{background: '#A9C147', zIndex: '1', height: '4vw'}}>
-              <TopMenu />
+
+    // temp var for showing the login screen. Later should be if 'state.user != null'' or something
+    var isLoggedIn = true;
+
+    if (isLoggedIn) {
+      return (
+        <LoginScreen />
+      );
+    } else {
+      return (
+        <div style={{height: '100%'}}>
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-xs-12" style={{background: '#A9C147', zIndex: '1', height: '4vw'}}>
+                <TopMenu />
+              </div>
             </div>
           </div>
-        </div>
-          <div className={Styles.container}>
-            <div className={Styles.row}>
-              <div className={["col-xs-11", Styles.noFloat].join(' ')} style={{background: '#D0F1F1'}}>
-                <ContentScreen />
-              </div>
-              <div className={["col-xs-1", Styles.noFloat].join(' ')} style={{background: '#2D3C56'}}>
-                <FriendList />
+            <div className={Styles.container}>
+              <div className={Styles.row}>
+                <div className={["col-xs-11", Styles.noFloat].join(' ')} style={{background: '#D0F1F1'}}>
+                  <ContentScreen />
+                </div>
+                <div className={["col-xs-1", Styles.noFloat].join(' ')} style={{background: '#2D3C56'}}>
+                  <FriendList />
+                </div>
               </div>
             </div>
-           </div>
-     </div>
-    );
+      </div>
+      );
+    }
   }
 }
