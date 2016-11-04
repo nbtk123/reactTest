@@ -18,6 +18,22 @@ export default function createRoutes(store) {
 
   return [
     {
+      path: '/login',
+      name: 'loginscreen',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          System.import('containers/LoginScreen'),
+        ]);
+
+        const renderRoute = loadModule(cb);
+
+        importModules.then(([component]) => {
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
+      },
+    }, {
       path: '/',
       name: 'home',
       getComponent(nextState, cb) {
