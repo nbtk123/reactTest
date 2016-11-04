@@ -8,14 +8,13 @@ class TextboxImageLeft extends Component {
     render() {
         return (
             <div style={{marginBottom: '0.2vw'}}>
-                <div className={styles.shadow}
-                        style={{backgroundColor: this.props.shadowcolor}}>
-                </div>
-                <div className={styles.container}
-                        style={{backgroundColor: this.props.bgcolor, position: 'relative'}}>
-                    <input type="text"
-                            className={styles.roundedTextbox}
-                            placeholder={this.props.hint}/>
+                <div className={styles.shadow} style={{backgroundColor: this.props.shadowcolor}}>
+                    <div className={styles.container}
+                            style={{backgroundColor: this.props.bgcolor}}>
+                        <input type="text"
+                                className={styles.roundedTextbox}
+                                placeholder={this.props.hint}/>
+                    </div>
                 </div>
             </div>
         );
