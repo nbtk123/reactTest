@@ -24,7 +24,8 @@ input[type=radio]{
 }
 
 label {
-  position: absolute;
+  /*position: absolute;*/
+  float: left;
   padding-left: 1.5vw;
   z-index: 9;
 }
