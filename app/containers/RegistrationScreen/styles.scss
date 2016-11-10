@@ -22,3 +22,8 @@ html,body,.container {
     padding-bottom: 4vw;
     border-radius: 1vw; 
 }
+
+* {
+  min-height: 0;
+  min-width: 0;
+}

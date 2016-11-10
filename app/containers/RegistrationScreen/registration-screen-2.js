@@ -4,15 +4,32 @@ import SignInUpButton from 'components/sign-in-up-button/SignInUpButton.js';
 import CheckboxWithIcon from 'components/checkbox-with-icon/CheckboxWithIcon.js';
 import Slider from 'react-slick';
 
+class RightArrow extends Component {
+    render() {
+        return (
+            <img src={require('images/arrowright.png')} style={{position: 'relative', float: 'right', top: '-5.75em'}}/>
+        );
+    }
+}
+class LeftArrow extends Component {
+    render() {
+        return (
+            <img src={require('images/arrowleft.png')} style={{position:'absolute', float: 'left', top: '-1.5em'}}/>
+        );
+    }
+}
+
 class RegistrationScreen2 extends Component {
     render() {
 
-        var settings = {
-            dots: true,
+        var carouselSettings = {
+            dots: false,
             infinite: true,
             speed: 500,
             slidesToShow: 3,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            nextArrow: (<RightArrow />),
+            prevArrow: (<LeftArrow />)
         };
 
         return (
@@ -52,9 +69,9 @@ class RegistrationScreen2 extends Component {
                             </div>
                         </div>
 
-                        <div className="row" style={{display: 'flex', justifyContent: 'center'}}>
+                        <div className="row" style={{display: 'flex', justifyContent: 'center', marginTop: '5em'}}>
                             <div className="col-xs-5">
-                                <Slider {... settings} >
+                                <Slider {... carouselSettings} >
                                     <div style={{textAlign: 'center'}}><h3>1</h3></div>
                                     <div style={{textAlign: 'center'}}><h3>2</h3></div>
                                     <div style={{textAlign: 'center'}}><h3>3</h3></div>
