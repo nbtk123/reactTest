@@ -2,9 +2,19 @@ import React, {Component} from 'react';
 import styles from './styles.scss';
 import SignInUpButton from 'components/sign-in-up-button/SignInUpButton.js';
 import CheckboxWithIcon from 'components/checkbox-with-icon/CheckboxWithIcon.js';
+import Slider from 'react-slick';
 
 class RegistrationScreen2 extends Component {
     render() {
+
+        var settings = {
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 3,
+            slidesToScroll: 1
+        };
+
         return (
             <div className={["container-fluid", styles.backgroundContainer].join(' ')}>
                 <div className="col-xs-8 col-xs-offset-2">
@@ -42,8 +52,17 @@ class RegistrationScreen2 extends Component {
                             </div>
                         </div>
 
-                        <div className="row">
-                            Another carousel
+                        <div className="row" style={{display: 'flex', justifyContent: 'center'}}>
+                            <div className="col-xs-5">
+                                <Slider {... settings} >
+                                    <div style={{textAlign: 'center'}}><h3>1</h3></div>
+                                    <div style={{textAlign: 'center'}}><h3>2</h3></div>
+                                    <div style={{textAlign: 'center'}}><h3>3</h3></div>
+                                    <div style={{textAlign: 'center'}}><h3>4</h3></div>
+                                    <div style={{textAlign: 'center'}}><h3>5</h3></div>
+                                    <div style={{textAlign: 'center'}}><h3>6</h3></div>
+                                </Slider>
+                            </div>
                         </div>
 
                         <div className="row">

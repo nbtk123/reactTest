@@ -22,7 +22,7 @@ function getComponentByPhase(phase) {
 class RegistrationScreen extends Component {    
     render() {
 
-        var phase = 3;
+        var phase = 2;
 
         return (
             <div className={["container-fluid", styles.backgroundContainer].join(' ')}>
