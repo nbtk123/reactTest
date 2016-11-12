@@ -67,7 +67,7 @@ export default function createRoutes(store) {
       },
       childRoutes: [
       {
-        path: '/home',
+        path: '/contentscreen',
         name: 'contentscreen',
         getComponent(nextState, cb) {
           const importModules = Promise.all([
