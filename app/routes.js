@@ -65,6 +65,42 @@ export default function createRoutes(store) {
 
         importModules.catch(errorLoading);
       },
+      childRoutes: [
+      {
+        path: '/home',
+        name: 'contentscreen',
+        getComponent(nextState, cb) {
+          const importModules = Promise.all([
+            System.import('containers/HomePage/contentscreen/contentscreen.js'),
+          ]);
+
+          const renderRoute = loadModule(cb);
+
+          importModules.then(([component]) => {
+            renderRoute(component);
+          });
+
+          importModules.catch(errorLoading);
+        },
+      },
+      {
+        path: '/friend',
+        name: 'friendpage',
+        getComponent(nextState, cb) {
+          const importModules = Promise.all([
+            System.import('containers/FriendPage/'),
+          ]);
+
+          const renderRoute = loadModule(cb);
+
+          importModules.then(([component]) => {
+            renderRoute(component);
+          });
+
+          importModules.catch(errorLoading);
+        },
+      },
+    ]
     }, {
       path: '*',
       name: 'notfound',

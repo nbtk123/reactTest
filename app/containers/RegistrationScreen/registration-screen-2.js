@@ -4,22 +4,28 @@ import SignInUpButton from 'components/sign-in-up-button/SignInUpButton.js';
 import CheckboxWithIcon from 'components/checkbox-with-icon/CheckboxWithIcon.js';
 import Slider from 'react-slick';
 
-class RightArrow extends Component {
+class BlankComponent extends Component {
     render() {
         return (
-            <img src={require('images/arrowright.png')} style={{position: 'relative', float: 'right', top: '-5.75em'}}/>
-        );
-    }
-}
-class LeftArrow extends Component {
-    render() {
-        return (
-            <img src={require('images/arrowleft.png')} style={{position:'absolute', float: 'left', top: '-1.5em'}}/>
+            <div />
         );
     }
 }
 
 class RegistrationScreen2 extends Component {
+    constructor(props) {
+        super(props)
+        this.next = this.next.bind(this)
+        this.previous = this.previous.bind(this)
+    }
+    
+    next() {
+        this.refs.slider.slickNext()
+    }
+    previous() {
+        this.refs.slider.slickPrev()
+    }
+
     render() {
 
         var carouselSettings = {
@@ -28,8 +34,8 @@ class RegistrationScreen2 extends Component {
             speed: 500,
             slidesToShow: 3,
             slidesToScroll: 1,
-            nextArrow: (<RightArrow />),
-            prevArrow: (<LeftArrow />)
+            nextArrow: (<BlankComponent />),
+            prevArrow: (<BlankComponent />)
         };
 
         return (
@@ -71,7 +77,7 @@ class RegistrationScreen2 extends Component {
 
                         <div className="row" style={{display: 'flex', justifyContent: 'center', marginTop: '5em'}}>
                             <div className="col-xs-5">
-                                <Slider {... carouselSettings} >
+                                <Slider ref="slider" {... carouselSettings} >
                                     <div style={{textAlign: 'center'}}><h3>1</h3></div>
                                     <div style={{textAlign: 'center'}}><h3>2</h3></div>
                                     <div style={{textAlign: 'center'}}><h3>3</h3></div>
@@ -79,6 +85,8 @@ class RegistrationScreen2 extends Component {
                                     <div style={{textAlign: 'center'}}><h3>5</h3></div>
                                     <div style={{textAlign: 'center'}}><h3>6</h3></div>
                                 </Slider>
+                                <img src={require('images/arrowleft.png')} onClick={this.previous.bind(this)} style={{position:'absolute', float: 'left', top: '-1.5em', left: '-2em'}}/>
+                                <img src={require('images/arrowright.png')} onClick={this.next.bind(this)} style={{position: 'relative', float: 'right', top: '-5.75em', left: '3em'}}/>
                             </div>
                         </div>
 
@@ -95,3 +103,6 @@ class RegistrationScreen2 extends Component {
 }
 
 export default RegistrationScreen2;
+
+//style={{position:'absolute', float: 'left', top: '-1.5em'}}
+//style={{position: 'relative', float: 'right', top: '-5.75em'}}
