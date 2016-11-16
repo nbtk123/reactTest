@@ -88,7 +88,7 @@ export default function createRoutes(store) {
         name: 'friendpage',
         getComponent(nextState, cb) {
           const importModules = Promise.all([
-            System.import('containers/FriendPage/'),
+            System.import('containers/FriendPage'),
           ]);
 
           const renderRoute = loadModule(cb);

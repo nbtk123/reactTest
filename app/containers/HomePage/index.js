@@ -26,8 +26,6 @@ export default class HomePage extends React.Component { // eslint-disable-line r
   }
 
   render() {
-    console.log("BLAT");
-    console.log(this.props.children);
 
     return (
       <div style={{height: '100%'}}>

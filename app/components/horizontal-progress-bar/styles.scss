@@ -1,0 +1,34 @@
+.progressbarOuter {
+    width: 200px;
+    height: 20px;
+    background-color: #ccc;
+    
+    position: relative;
+    
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+}
+
+.progressbarInner, .progressbarInner img {
+    height: 100%;
+    position: absolute;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+}
+
+.progressbarInner {
+    background-color: #C71585;
+    bottom: 0;
+    width: 0%;
+    text-align: right;
+}
+
+.progressbarInner img {
+    position: relative;
+    top: -1.5em;
+    width: 2em;
+    height: 3em;
+    left: 1.125em;
+}
