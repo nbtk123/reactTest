@@ -3,14 +3,7 @@ import styles from './styles.scss';
 import SignInUpButton from 'components/sign-in-up-button/SignInUpButton.js';
 import CheckboxWithIcon from 'components/checkbox-with-icon/CheckboxWithIcon.js';
 import Slider from 'react-slick';
-
-class BlankComponent extends Component {
-    render() {
-        return (
-            <div />
-        );
-    }
-}
+import BlankComponent from 'components/blank-component';
 
 class RegistrationScreen2 extends Component {
     constructor(props) {

@@ -1,0 +1,12 @@
+.container {
+    @extend .shadow;
+    position: relative;
+    top: -0.2vw;
+    left: -0.05vw;
+}
+
+.shadow {
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+}
