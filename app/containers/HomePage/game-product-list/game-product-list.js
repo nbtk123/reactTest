@@ -17,7 +17,7 @@ class GameProductList extends Component {
 
         return (
                     <ul style={{listStyle: 'none', textAlign: 'center'}} className="list-inline">
-                        {products.map((product) => <GameProductButton key={product.id} {...product}/> )}
+                        {products.map((product) => <GameProductButton key={product.id} isShowGameTitle="true" {...product}/> )}
                       <AddMoreBtn />
                     </ul>
 

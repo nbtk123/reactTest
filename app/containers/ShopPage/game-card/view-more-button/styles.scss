@@ -1,0 +1,17 @@
+.shadow {
+    background-color: #1A293F;
+    border-bottom-left-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+    position:relative;
+}
+
+.content {
+    @extend .shadow;
+    top: -0.6vw;
+    background-color: #374356;
+    text-align: center;
+    color: white;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    font-size: 1.5vw;
+}
