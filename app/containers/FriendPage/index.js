@@ -4,6 +4,7 @@ import ImageTextButton from 'components/image-text-button/image-text-button';
 import HorizontalProgressBar from 'components/horizontal-progress-bar/horizontal-progress-bar';
 import CircleImage from 'components/circle-image/circle-image';
 import LevelTable from './level-table/level-table';
+import EvolutionComponent from './evolution-component/evolution-component';
 
 class FriendPage extends Component {
     render() {
@@ -70,14 +71,20 @@ class FriendPage extends Component {
                             </div>
 
                             <div className="col-xs-3">
-                                <div>Source</div>
-                                <div>egg</div>
-
-                                <div>Size</div>
-                                <div>0.7m 6.9kg</div>
-
-                                <div>Evolution</div>
-                                <div>evolution levels</div>
+                                <div className="container-fluid">
+                                    <div className="row">
+                                        <div className={styles.subTitle}>Source</div>
+                                        <div><img src="http://i48.tinypic.com/2dgkqkj.png" style={{width: '5vw', height: '5vw'}}/></div>
+                                    </div>
+                                    <div className="row" style={{position:'relative', top:'1vw'}}>
+                                        <div className={styles.subTitle}>Size</div>
+                                        <div>0.7m 6.9kg</div>
+                                    </div>
+                                    <div className="row" style={{position:'relative', top:'2vw'}}>
+                                        <div className={styles.subTitle}>Evolution</div>
+                                        <div><EvolutionComponent /></div>
+                                    </div>
+                                </div>
                             </div>
 
                         </div>

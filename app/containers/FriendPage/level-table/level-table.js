@@ -51,8 +51,9 @@ class LevelTable extends Component {
                         })
                     }
                 </Slider>
-                <img src={require('images/arrowleft.png')} onClick={this.previous.bind(this)} style={{position:'absolute', float: 'left', top: '-1.5em', left: '-2em'}}/>
-                <img src={require('images/arrowright.png')} onClick={this.next.bind(this)} style={{position: 'relative', float: 'right', top: '-5.75em', left: '3em'}}/>
+                <i className="fa fa-angle-down" aria-hidden="true"
+                    style={{fontSize: '4vw', color:'#A9C147', display: 'flex', justifyContent: 'center'}}
+                    onClick={this.next.bind(this)}></i>
             </div>
         );
     }
