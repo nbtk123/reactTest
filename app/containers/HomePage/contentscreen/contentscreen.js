@@ -15,9 +15,9 @@ class ContentScreen extends Component {
                 </div>
                 <div className="col-xs-2 col-xs-offset-1">
                     <div style={{marginBottom: '50px'}}><LevelComponent/></div>
-                    <div style={{marginBottom: '20px'}}><ImageTextButton text="5 Crystals" imgsrc="http://downloadicons.net/sites/default/files/purple-crystal-icon-2105.png"/></div>
-                    <div style={{marginBottom: '20px'}}><ImageTextButton text="100 Points" imgsrc="http://www.freeiconspng.com/uploads/coins-icon-finance-29.png"/></div>
-                    <div style={{marginBottom: '20px'}}><ImageTextButton text="Return to my last task"/></div>
+                    <div style={{marginBottom: '20px', position: 'relative'}}><ImageTextButton bgcolor="#A9C147" shadowcolor="#707F17" text="5 Crystals" imgsrc="http://downloadicons.net/sites/default/files/purple-crystal-icon-2105.png"/></div>
+                    <div style={{marginBottom: '20px', position: 'relative'}}><ImageTextButton bgcolor="#A9C147" shadowcolor="#707F17" text="100 Points" imgsrc="http://www.freeiconspng.com/uploads/coins-icon-finance-29.png"/></div>
+                    <div style={{marginBottom: '20px', position: 'relative'}}><ImageTextButton bgcolor="#A9C147" shadowcolor="#707F17" text="Return to my last task"/></div>
                 </div>
             </div>
             <div className="row">

@@ -1,0 +1,20 @@
+.container {
+    @extend .shadow;
+    overflow: hidden;
+    position: relative;
+    top: -0.3vw;
+    left: -0.125vw;
+    padding-left: 0.3vw;
+    padding-right: 0.3vw;
+    padding-top: 0.2vw;
+    padding-bottom: 0.1vw;
+}
+
+.shadow {
+    position: relative;
+    border-radius: 0.75vw;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

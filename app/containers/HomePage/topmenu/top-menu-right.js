@@ -7,7 +7,7 @@ import Separator from './separator';
 class TopMenuRight extends Component {
     render() {
         return (
-            <ul style={{fontSize: '1vw'}}>
+            <ul>
                 <li style={{display: 'inline-block', color: 'white'}}><TopMenuProfile /></li>
                 <li style={{display: 'inline-block', color: 'white', position: 'relative', top: '-1.6vw', marginRight:'1vw'}}><Separator isShown='true' /></li>
                 <li style={{display: 'inline-block', color: 'white'}}><TopMenuFriends /></li>
